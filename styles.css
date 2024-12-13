@@ -198,7 +198,7 @@ form button:hover {
 }
 
 audio.audio-player {
-    width: 60%;
+    width: 65%;
     margin-top: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -237,7 +237,7 @@ audio.audio-player {
 .artist-info p {
     font-size: 1rem;
     line-height: 1.5;
-    max-height: 7rem;
+    max-height: 7.5rem;
     overflow: hidden; 
     text-overflow: ellipsis;
     overflow-wrap: break-word;
@@ -434,8 +434,11 @@ audio.audio-player {
     }
 
     .menu-icon {
-        top: 1.2rem;
+        top: 1.5rem;
         width: 35px;
         height: 35px;
     }
+
+    audio.audio-player {
+    width: calc(100% - 25px);
 }
