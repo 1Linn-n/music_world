@@ -215,7 +215,8 @@ audio.audio-player {
 
 .artist-card {
     position: relative;
-    width: 100%;
+    width: calc(45% - 20px);
+    margin-bottom: 20px; 
     max-width: 600px;
     margin: 40px;
     box-sizing: border-box;
@@ -234,15 +235,18 @@ audio.audio-player {
 }
 
 .artist-info p {
-    margin: 0;
     font-size: 1rem;
+    line-height: 1.5;
+    max-height: 6rem;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
 }
 
+
 .artist-card img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s;
 }
 
 .artist-card:hover img {
@@ -265,22 +269,6 @@ audio.audio-player {
 .artist-card:hover .artist-info {
     opacity: 1;
 }
-
-@media (max-width: 768px) {
-    .artist-card {
-        width: calc(100% - 40px); /* Адаптивная ширина для мобильных */
-        margin: 20px auto;
-    }
-
-    .artist-info p {
-        font-size: 0.9rem; /* Уменьшить размер шрифта */
-    }
-
-    .artist-card img {
-        max-height: 200px; /* Ограничить высоту изображений */
-        object-fit: cover; /* Обрезка изображения для сохранения пропорций */
-    }
-}  
 
 .register-link, .login-link {
     display: inline-block;
@@ -312,7 +300,7 @@ audio.audio-player {
     overflow: hidden;
     white-space: nowrap;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 900;
     display: flex;
     flex-direction: column;
 }
@@ -428,4 +416,26 @@ audio.audio-player {
 
 .about-us p {
     font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .artist-card {
+        width: calc(100% - 40px); 
+        margin: 20px auto;
+    }
+
+    .artist-info p {
+        font-size: 0.9rem; 
+    }
+
+    .artist-card img {
+        max-height: 200px; 
+        object-fit: cover;
+    }
+
+    .menu-icon {
+        right: 0.5rem; /* Меньший отступ справа */
+        width: 30px; /* Уменьшенный размер кнопки */
+        height: 30px;
+    }
 }
