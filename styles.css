@@ -16,18 +16,20 @@ body {
 }
 
 header {
+    position:relative;
     background-color: #333;
     color: white;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 
 .header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -60,18 +62,19 @@ a {
 }
 
 .menu-icon {
-    display: block;
+    position: absolute;
+    top: 23px;
+    right: 25px;
+    z-index: 1100;
+    width: 60px;
+    height: 60px; 
     cursor: pointer;
 }
 
 .menu-icon img {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    z-index: 1100;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: auto;
+    max-width: 60px;
     transition: transform 0.3s;
 }
 
@@ -265,13 +268,19 @@ audio.audio-player {
 
 @media (max-width: 768px) {
     .artist-card {
-        width: calc(90% - 20px);
+        width: calc(100% - 40px); /* Адаптивная ширина для мобильных */
+        margin: 20px auto;
     }
 
     .artist-info p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Уменьшить размер шрифта */
     }
-}   
+
+    .artist-card img {
+        max-height: 200px; /* Ограничить высоту изображений */
+        object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+    }
+}  
 
 .register-link, .login-link {
     display: inline-block;
