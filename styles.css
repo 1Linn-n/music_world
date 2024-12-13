@@ -258,6 +258,16 @@ audio.audio-player {
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    .artist-card {
+        width: calc(90% - 20px);
+    }
+
+    .artist-info p {
+        font-size: 0.9rem;
+    }
+}   
+
 .register-link, .login-link {
     display: inline-block;
     margin-top: 1rem;
@@ -280,8 +290,8 @@ audio.audio-player {
 .nav-menu {
     position:absolute;    
     right: 0;
-    top: 100px;
-    height: 100%;
+    top: 90px;
+    height: 120%;
     background-color: #333;
     width: 0;
     overflow: hidden;
