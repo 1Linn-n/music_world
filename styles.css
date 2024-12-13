@@ -237,7 +237,7 @@ audio.audio-player {
 .artist-info p {
     font-size: 1rem;
     line-height: 1.5;
-    max-height: 6rem;
+    max-height: 7rem;
     overflow: hidden; 
     text-overflow: ellipsis;
     overflow-wrap: break-word;
@@ -434,6 +434,7 @@ audio.audio-player {
     }
 
     .menu-icon {
+        top: 1.2rem;
         width: 35px;
         height: 35px;
     }
